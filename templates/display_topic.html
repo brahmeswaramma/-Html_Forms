@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table
+    {
+        font-family: Arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        border-style: ridge;
+        
+    
+    }
+    td,th
+    {
+        border: 1px solid cyan;
+        text-align:center;
+        padding: 8px;
+        border-style: ridge;
+    
+    }
+    tr:nth-child(even)
+    {
+        background-color:darksalmon;
+    
+    }
+    tr:nth-child(odd)
+    {
+        background-color:dodgerblue;
+    }
+    h1{
+        background: linear-gradient(60deg,green,red,cyan,indigo,orange);
+        text-align: center;
+        color: rgb(0,0,0);
+    }
+    body
+    {
+        background:linear-gradient(black,grey,darkblue);
+    }
+    td:hover
+    {
+        cursor: pointer;
+        background-color:chartreuse;
+        color: white;
+    }
+    h1:hover
+    {       
+        color: white;
+        
+    }
+    </style>
+<body>
+    <h1>Topic Table Data</h1>
+    <center>
+        <table border="3px">
+            <tr>
+                <th>Topic_Name</th>
+            </tr>
+            {% for to in topics %}
+                <tr>
+                    <td>{{to.topic_name}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
+

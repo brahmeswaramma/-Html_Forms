@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <center>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="n">name</label>
+            <select id="n" name="n">
+                {% for wo in webpages %}
+                <option value="{{wo.name}}">{{wo.name}}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <br>
+            <label for="a">author</label>
+            <input type="text" id="a" name="a">
+            <br>
+            <br>
+            <label for="d">date</label>
+            <input type="text" id="d" name="d">
+            <br>
+            <br>
+            <input type="submit" value="Enter">
+        </form>
+    </center>
+</body>
+</html>
